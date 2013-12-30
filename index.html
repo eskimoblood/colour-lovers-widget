@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="src/colourloversWidget.css"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  <script type="text/javascript" src="src/colourloversWidget.js"></script>
+  <style type="text/css">
+    body {
+      font-family: sans-serif;
+    }
+
+    input {
+      height: 30px;
+      padding: 4px 6px;
+      border: 1px solid rgb(229, 229, 229);
+      background: rgb(255, 255, 255);
+      color: rgb(102, 102, 102);
+      -webkit-transition: all linear .2s;
+      transition: all linear .2s;
+      border-radius: 4px;
+      margin: 0em;
+      display: inline-block;
+      font-size: 100%;
+      box-sizing: border-box;
+    }
+
+    input:focus {
+      border-color: rgb(153, 186, 202);
+      outline: 0;
+      background: rgb(245, 251, 254);
+      color: rgb(102, 102, 102);
+    }
+  </style>
+</head>
+<body>
+<p>
+  Open the console to see the result when selecting a palette.
+</p>
+
+<p>
+  <label for="style-1">style 1 </label>
+  <input type="" id="style-1"/>
+</p>
+
+<p>
+  <label for="style-2"> style 2</label>
+  <input type="" id="style-2"/>
+</p>
+
+<script type="text/javascript">
+  $('#style-1').colourLovers({
+    onSelect: logColors,
+    type: 'style-1'
+  })
+
+  $('#style-2').colourLovers({
+    onSelect: logColors,
+    type: 'style-2'
+  })
+
+  function logColors(colors) {
+    console.log('You selected: ');
+    colors.forEach(function(color) {
+      console.log('%c ' + color, 'color: #' + color);
+    })
+  }
+</script>
+</body>
+</html>
