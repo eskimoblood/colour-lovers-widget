@@ -9,7 +9,8 @@ and the following line to initialize the plugin.
 $(yourInputField).colourLovers(options)
 ```
 
-You can pass `options` to change the look of the widget.
+You can pass `options` to change the look of the widget and for a callback function
+that will be called with an array of the hex value of palette colors.
 
 ```
 {
