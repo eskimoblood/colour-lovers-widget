@@ -1,0 +1,16 @@
+{
+  "name": "colourloversWidget",
+  "version": "0.1.0",
+  "description": "jquery widget to query the COLOURlovers API ",
+  "repository": "",
+  "keywords": [
+    "color",
+    "colourLovers"
+  ],
+  "author": "Andreas Koeberle",
+  "license": "BSD",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-gh-pages": "~0.9.0"
+  }
+}
